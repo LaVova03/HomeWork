@@ -7,11 +7,13 @@ town ? town : alert('Шкода, що Ви не захотіли ввести с
 const favoriteSport = prompt("Який ваш улюблений вид спорту; 'Футбол', 'Бокс', 'Баскетбол'?");
 favoriteSport ? favoriteSport : alert('Шкода, що Ви не захотіли ввести свій улюблений вид спорту');
 
-const newAge = age ? `${'Вам'}  ${2023 - age}  ${'роки(ів)'}` : false;
+const newAge = age ? `${'Вам'}  ${2023 - age}  ${'роки(ів)'}` : 'Помилка';
 
 const newTown = town.toUpperCase();
 switch (newTown) {
-    case '': break;
+    case '':
+        alert(`${newAge}`);
+        break;
     case 'КИЇВ':
         alert(`${newAge} ${'Ви проживаєте у столиці України'}`);
         break;
